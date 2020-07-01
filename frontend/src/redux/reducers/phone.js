@@ -1,4 +1,4 @@
-const phoneReducer = (state, action) => {
+const phoneReducer = (state = {}, action) => {
     switch (action.type) {
         case 'GET_ALL_PHONES':
             return {
