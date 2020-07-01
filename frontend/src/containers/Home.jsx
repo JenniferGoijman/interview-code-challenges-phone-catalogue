@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getAll } from '../redux/actions/phones';
+import PhoneInCatalogue from '../components/PhoneInCatalogue/PhoneInCatalogue';
 
 const Home = props => {
     useEffect(() => {
@@ -10,7 +11,7 @@ const Home = props => {
     return (
         <div>
             {props.phones?.length > 0 && props.phones?.map(phone => 
-                <div key={phone.id}>{phone.name}</div>
+                <PhoneInCatalogue key={phone.id} phone={phone} />
             )}
         </div>
     )
