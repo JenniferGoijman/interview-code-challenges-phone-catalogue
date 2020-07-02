@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import 'antd/dist/antd.css';
 import './App.css';
+
 
 import Home from './containers/Home/Home';
 import Phone from './containers/Phone/Phone';
