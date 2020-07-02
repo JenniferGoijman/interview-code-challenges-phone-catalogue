@@ -1,8 +1,21 @@
-.phones-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.home-container {
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
+
+    .filter-price {
+        margin: 10px 0px 10px 100px;
+        width: 300px;
+
+        .price-label {
+            margin-right: 20px;
+        }
+    }
+    
+    .phones-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 100vh;    
+    }
 }
