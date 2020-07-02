@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { connect } from 'react-redux';
 import './Phone.scss';
-import { Spin } from 'antd';
+import { Spin, Breadcrumb } from 'antd';
 import PhoneDetails from '../../components/PhoneDetails/PhoneDetails';
 
 const Phone = props => {
@@ -13,7 +13,16 @@ const Phone = props => {
     return (
         <div className="phone-container">
             {!currentPhone && <Spin size="large" />}
-            {currentPhone && <PhoneDetails phone={currentPhone} />}
+            {currentPhone && <div className="phone">
+                <div className="breadcrumb">
+                    <Breadcrumb>
+                        <Breadcrumb.Item>Home</Breadcrumb.Item>
+                        <Breadcrumb.Item><a href="/">Phones</a></Breadcrumb.Item>
+                        <Breadcrumb.Item>{currentPhone?.name}</Breadcrumb.Item>
+                    </Breadcrumb>
+                </div>
+                <PhoneDetails phone={currentPhone} />
+            </div>}
         </div>
     )
 }

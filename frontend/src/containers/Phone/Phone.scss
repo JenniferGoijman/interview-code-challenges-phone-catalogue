@@ -4,4 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .phone {
+        height: 100%;
+
+        .breadcrumb {
+            display: flex;
+            margin: 25px 100px;
+        }
+    }
 }
