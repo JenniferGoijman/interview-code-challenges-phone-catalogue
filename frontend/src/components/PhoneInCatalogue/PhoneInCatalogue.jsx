@@ -11,7 +11,7 @@ const PhoneInCatalogue = props => {
     }
 
     return (
-        <div className="phone-in-catalogue-container" key={props.phone.id}  onClick={showPhoneDetails.bind(this, props.phone.id)}>
+        <div className="phone-in-catalogue-container" key={props.phone.id} onClick={showPhoneDetails.bind(this, props.phone.id)}>
             <img src={images_path} alt="imagen del movil"/>
             <div>{props.phone.name}</div>
             <div>{props.phone.price} €</div>            
