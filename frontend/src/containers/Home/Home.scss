@@ -1,9 +1,18 @@
 .home-container {
     width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #f5f5f5;
     
+    .spin {
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .breadcrumbs {
         display: flex;
         margin: 25px 10vw;
@@ -61,10 +70,7 @@
             margin-top: 30px;
     
             .phone-container {
-                // display: flex;
-                // flex-wrap: wrap;
                 margin: 0;
-                // height: fit-content;
             }    
         }
     }

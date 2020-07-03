@@ -3,15 +3,28 @@ import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './Phone.scss';
 import { Spin, Breadcrumb } from 'antd';
+import { getAll } from '../../redux/actions/phones';
 import PhoneDetails from '../../components/PhoneDetails/PhoneDetails';
 import NotFound from '../../components/NotFound/NotFound';
 
+
 const Phone = props => {
     const history = useHistory();
-    const [currentPhone, setCurrentPhone] = useState(0);
+    const [currentPhone, setCurrentPhone] = useState();
+    const [notFound, setNotFound] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setCurrentPhone(props.phones?.find(phone => phone.id == props.match.params.id));
+        getAll()
+        .then(res => {
+            const phone = res.data?.find(p => p.id == props.match.params.id);
+            if (phone) {
+                setCurrentPhone(phone)
+            } else {
+                setNotFound(true)
+            }
+            setLoading(false);
+        });
     }, [])
 
     const goHome = () => {
@@ -20,9 +33,9 @@ const Phone = props => {
 
     return (
         <div className="phone-container">
-            {props.phones?.length>0 && !currentPhone && currentPhone !== 0 && <NotFound />}
+            {notFound && <NotFound />}
             
-            {!props.phones?.length>0 && currentPhone === 0 && <Spin size="large" />}
+            {loading && <Spin size="large" />}
             
             {currentPhone && <div className="phone">
                 <div className="breadcrumb">
