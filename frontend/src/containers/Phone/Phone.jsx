@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './Phone.scss';
 import { Spin, Breadcrumb } from 'antd';
 import PhoneDetails from '../../components/PhoneDetails/PhoneDetails';
+import NotFound from '../../components/NotFound/NotFound';
 
 const Phone = props => {
     const [currentPhone, setCurrentPhone] = useState();
@@ -12,7 +13,10 @@ const Phone = props => {
 
     return (
         <div className="phone-container">
-            {!currentPhone && <Spin size="large" />}
+            {props.phones?.length>0 && !currentPhone && <NotFound />}
+            
+            {!props.phones?.length>0 && !currentPhone && <Spin size="large" />}
+            
             {currentPhone && <div className="phone">
                 <div className="breadcrumb">
                     <Breadcrumb>
