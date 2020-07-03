@@ -2,14 +2,14 @@ import React from 'react';
 import './PhoneDetails.scss';
 
 const PhoneDetails = props => {
-    const images_path = '../../images/' + props.phone.imageFileName;
+    const phone_image_path = '../../images/' + props.phone.imageFileName;
 
     return (
         <div className="phone-details-container" key={props.phone.id}>
             <div className="phone-details">
                 <div className="details-container">
                     <div className="image">
-                        <img src={images_path} alt="Phone image" />
+                        <img src={phone_image_path} alt="Phone image" />
                     </div>
                     <div className="info">
                         <h1>
@@ -29,14 +29,17 @@ const PhoneDetails = props => {
                     <h2>Technical Specifications</h2>
                     <div className="specifications">
                         <div className="specification">
+                            <img src="../../images/screen.png" alt="" srcset=""/>
                             <p>Screen size</p>
                             <h4>{props.phone.screen}</h4>
                         </div>
                         <div className="specification">
+                            <img src="../../images/cpu.png" alt="" srcset=""/>
                             <p>Processor</p>
                             <h4>{props.phone.processor}</h4>
                         </div>
                         <div className="specification">
+                            <img src="../../images/ram.png" alt="" srcset=""/>
                             <p>Ram Memory</p>
                             <h4>{props.phone.ram}GB</h4>
                         </div>
