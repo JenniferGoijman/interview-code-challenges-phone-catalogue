@@ -1,6 +1,6 @@
 .phone-in-catalogue-container {
-    height: 350px;
     width: 250px;
+    height: 350px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -11,8 +11,14 @@
     padding: 20px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 0 8px 0 rgba(0,0,0,.1);
 
-    img {
-        width: 90%;
+    .phone-image {
+        max-width: 230px;
+        max-height: 230px;
+        
+        img {
+            max-width: 230px;
+            max-height: 230px;
+        }
     }
 
     h2 {
@@ -21,6 +27,11 @@
     
     .price {
         color: #1890ff;
+    }
+
+    .see-details-button {
+        margin: 10px 0;
+        width: 100%;
     }
 }
 
@@ -33,18 +44,22 @@
     .phone-in-catalogue-container {
         width: 45vw;
         height: 65vw;
-        // border-radius: 10px;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
         margin: 5px;
-        // background-color: #fff;
         padding: 10px;
-        // box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 0 8px 0 rgba(0,0,0,.1);
+        
+        .phone-image {
+            max-width: 30vw;
+            max-height: 45vw;
+            
+            img {
+                max-width: 30vw;
+                max-height: 45vw;
+                margin-top: 30px;
+            }
+        }
 
-        img {
-            max-width: 45vw;
+        .see-details-button {
+            visibility: hidden;
         }
     }    
 }
