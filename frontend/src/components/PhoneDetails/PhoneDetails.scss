@@ -39,7 +39,7 @@
                 margin-left: 100px;
 
                 .price {
-                    color: #78c13a;
+                    color: #1890ff;
                 }
 
                 .color {
@@ -101,6 +101,9 @@
 
 @media only screen and (max-width: 415px) {
     .phone-details-container {
+        margin: 0;
+        width: 100%;
+
         .phone-details {
             margin: 0;
             width: 100%;

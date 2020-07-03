@@ -12,7 +12,7 @@
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 0 8px 0 rgba(0,0,0,.1);
 
     img {
-        height: 75%;
+        width: 90%;
     }
 
     h2 {
@@ -20,11 +20,31 @@
     }
     
     .price {
-        color: #78c13a;
+        color: #1890ff;
     }
 }
 
 .phone-in-catalogue-container:hover {
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 5px #1890ff;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 415px) {
+    .phone-in-catalogue-container {
+        width: 45vw;
+        height: 65vw;
+        // border-radius: 10px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        margin: 5px;
+        // background-color: #fff;
+        padding: 10px;
+        // box-shadow: 0 2px 2px 0 rgba(0,0,0,.05), 0 0 8px 0 rgba(0,0,0,.1);
+
+        img {
+            max-width: 45vw;
+        }
+    }    
 }
