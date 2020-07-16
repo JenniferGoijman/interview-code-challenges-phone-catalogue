@@ -2,7 +2,7 @@
 
 This was a code challenge for an interviewing at [GuideSmiths](https://github.com/guidesmiths)
 
-![foto](frontend/src/img/readme/phone-catalogue.png)
+![foto](frontend/src/img/readme/phone-catalogue.gif)
 
 ## Prerequisites
 
